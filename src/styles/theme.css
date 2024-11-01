@@ -1,0 +1,27 @@
+/* styles/theme.css */
+:root {
+  /* Light theme */
+  --bg-primary: hsl(230, 100%, 99%);
+  --bg-card: hsl(0, 0%, 100%);
+  --slider-full: hsl(174, 77%, 80%);
+  --slider-bg: hsl(174, 86%, 45%);
+  --text-primary: hsl(227, 35%, 25%);
+  --text-secondary: hsl(225, 20%, 60%);
+  --toggle-bg: hsl(223, 50%, 87%);
+  --discount-bg: hsl(14, 92%, 95%);
+  --discount-text: hsl(15, 100%, 70%);
+  --button-text: hsl(226, 100%, 87%);
+}
+
+[data-theme='dark'] {
+  --bg-primary: hsl(230, 17%, 14%);
+  --bg-card: hsl(228, 28%, 20%);
+  --slider-full: hsl(174, 86%, 45%);
+  --slider-bg: hsl(174, 77%, 80%);
+  --text-primary: hsl(0, 0%, 100%);
+  --text-secondary: hsl(228, 34%, 66%);
+  --toggle-bg: hsl(223, 50%, 87%);
+  --discount-bg: hsl(14, 92%, 25%);
+  --discount-text: hsl(15, 100%, 70%);
+  --button-text: hsl(226, 100%, 87%);
+}
