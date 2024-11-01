@@ -1,6 +1,7 @@
 import { PriceSlider } from "@/components/PricingCard/PriceSlider";
 import { ToggleSwitch } from "@/components/PricingCard/ToggleSwitch";
 import { useTheme } from "@/hooks/useTheme";
+import { HeroHighlight } from "@/components/ui/hero-highlight";
 import gsap from "gsap";
 import { useEffect, useState } from "react"
 
@@ -30,8 +31,8 @@ export default function Home() {
   const currentPrice = isYearly ? PricingTiers[selectedTier].yearlyPrice * 0.75 : PricingTiers[selectedTier].monthlyPrice;
 
   return (
-    <div className="min-h-screen grid place-items-center bg-slate-50 dark:bg-slate-900 transition-colors duration-300">
-      <div className="pricing-card w-full max-w-2xl mx-4 p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-xl transition-colors duration-300">
+    <HeroHighlight containerClassName="min-h-screen w-full">
+      <div className="pricing-card w-full max-w-2xl mx-4 p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-xl transition-colors duration-300 z-30 relative">
         <div className="flex justify-end mb-8">
           <ToggleSwitch checked={isDark} onChange={toggleTheme} label="Dark Mode" />
         </div>
@@ -55,7 +56,7 @@ export default function Home() {
           onChange={setSelectedTier}
           max={4}
         />
-                <div className="flex items-center justify-center gap-4 mb-8">
+        <div className="flex items-center justify-center gap-4 mb-8">
           <span className="text-slate-600 dark:text-slate-300">Monthly Billing</span>
           <ToggleSwitch
             checked={isYearly}
@@ -84,6 +85,6 @@ export default function Home() {
           </button>
         </div>
       </div>
-    </div>
+    </HeroHighlight>
   )
 }
